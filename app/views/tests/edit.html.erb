@@ -1,0 +1,20 @@
+<h1> This is Edit post</h1>
+
+<%= form_for @post do |f| %>
+	<p> 
+		<%= f.label :title %>
+		<%= f.text_field :title %></br>
+	</p>
+		<p> 
+		<%= f.label :body %>
+		<%= f.text_area :body %></br>
+		
+		<%= f.label :category_id %> 
+      <%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One" } %>
+	</p>
+	
+    <p>
+    	<%= f.submit "Edit Post" %>
+    </p>
+
+    <% end %>

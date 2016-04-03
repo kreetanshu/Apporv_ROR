@@ -1,0 +1,10 @@
+<h1> This is Show post</h1>
+<%= @post.id %>
+<%= @post.title %>
+<%= @post.body %>
+<%= @post.created_at.strftime("%b %d. %Y") %>
+<%= @post.updated_at.strftime("%b %d. %Y") %>
+<%= link_to "Home", {:controller => 'tests' , :action => 'index'} %></br>
+<%= link_to 'Destroy', @post, data:{confirm: 'Are you sure to delete'} , method: :delete %>
+<%= link_to "Pass Link", {:controller => 'tests' , :action => 'calc' , :id => 4 } %> |
+ <%= link_to "Gmail ", "http://www.gmail.com/", data: { confirm: "Are you sure?" } %>
